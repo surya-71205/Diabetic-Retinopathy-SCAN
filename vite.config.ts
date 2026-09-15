@@ -12,6 +12,12 @@ export default defineConfig({
   },
   server: {
     port: 5173,
-    host: true,
+    host: '0.0.0.0',
+    strictPort: true,
+    watch: {
+      usePolling: true,
+      interval: 1000,
+      ignored: ['**/.git/**', '**/node_modules/**', '**/dist/**', '**/DR-MobileNetV3-main/**'],
+    },
   },
 });
